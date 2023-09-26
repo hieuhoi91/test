@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const path = require('path');
+const nextConfig = {
+  images: {
+    domains: ['themes-themegoods.b-cdn.net'],
+  },
 
-module.exports = nextConfig
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
+};
+
+module.exports = nextConfig;
