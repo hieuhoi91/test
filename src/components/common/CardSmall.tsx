@@ -12,7 +12,7 @@ const CardSmall: FC<ImageProps> = props => {
     <div className={styles.wrapper}>
       <Image
         width={500}
-        height={500}
+        height={300}
         src={props.src}
         alt=""
         className={styles.img}

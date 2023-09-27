@@ -1,0 +1,31 @@
+@mixin shadow-card-on {
+  animation: 0.2s forwards shadow-card;
+}
+
+@mixin shadow-card-off {
+  animation: 0.2s forwards shadow-card-reverse;
+}
+
+@keyframes shadow-card {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes shadow-card-reverse {
+  0% {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
