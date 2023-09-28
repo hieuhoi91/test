@@ -4,4 +4,44 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
+  position: relative;
+
+  .scroll {
+    padding: 10px;
+    border-radius: 100%;
+    background-color: #1ec6b6;
+    position: fixed;
+    z-index: 30;
+    bottom: 20px;
+    cursor: pointer;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    animation: 0.1s forwards scroll-reverse;
+
+    &:hover {
+      animation: 0.1s forwards scroll;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

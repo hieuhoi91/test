@@ -18,6 +18,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-scroll-parallax": "^3.4.2",
     "styled-components": "^5.3.11"
   },
   "devDependencies": {

@@ -1,3 +1,6 @@
+@import '../../app/vars';
+@import '../../app/mixins';
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -7,11 +10,19 @@
   .title {
     font-size: 36px;
     font-weight: 700;
+
+    @include for-size(tablet) {
+      font-size: 24px;
+    }
   }
 
   .description {
     font-size: 15px;
     margin-bottom: 20px;
     color: #a4a7ad;
+
+    @include for-size(tablet) {
+      font-size: 12px;
+    }
   }
 }

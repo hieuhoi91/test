@@ -1,0 +1,13 @@
+@mixin for-size($breakpoint) {
+  //Kiểm tra breakpoint truyền vào có tồn tại
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Lấy giá trị pixel breakpoint đó
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    //Build media query
+    @media (max-width: $breakpoint-value) {
+      //Những gì bạn mong muốn sẽ được lồng vào @content
+      @content;
+    }
+  }
+}

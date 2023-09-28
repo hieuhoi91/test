@@ -1,3 +1,6 @@
+@import '../../app/vars';
+@import '../../app/mixins';
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -10,5 +13,25 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+
+    @include for-size(desktop-lg) {
+      width: 80%;
+      height: 100%;
+      gap: 20px;
+    }
+
+    @include for-size(tablet-lg) {
+      width: 90%;
+      height: 100%;
+      gap: 10px;
+    }
+
+    @include for-size(tablet) {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      gap: 30px;
+    }
   }
 }

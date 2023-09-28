@@ -1,4 +1,6 @@
 @import '../../app/animate.module.scss';
+@import '../../app/vars';
+@import '../../app/mixins';
 
 .wrapper {
   position: relative;
@@ -7,6 +9,14 @@
   border-radius: 5px;
   overflow: hidden;
   @include shadow-card-off;
+
+  @include for-size(desktop) {
+    height: 20vw;
+  }
+
+  @include for-size(tablet) {
+    height: 280px;
+  }
 
   &:hover {
     @include shadow-card-on;

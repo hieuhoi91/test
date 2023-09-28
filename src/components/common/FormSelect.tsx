@@ -35,6 +35,7 @@ const FormSelect: FC<FormSelectProps> = props => {
         inputProps={{ 'aria-label': 'Without label' }}
         IconComponent={() => props.icon}
         sx={{
+          padding: 0,
           fontSize: '0.8rem',
           paddingRight: '10px',
           height: '100%',

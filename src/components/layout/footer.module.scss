@@ -1,3 +1,6 @@
+@import '../../app/vars';
+@import '../../app/mixins';
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -10,8 +13,98 @@
   .ppb_wrapper {
     display: grid;
     width: 65%;
-    height: 320px;
     padding: 50px 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    @include for-size(desktop-lg) {
+      width: 80%;
+      height: 100%;
+      gap: 20px;
+    }
+
+    @include for-size(tablet-lg) {
+      width: 90%;
+      height: 100%;
+      gap: 10px;
+    }
+
+    @include for-size(tablet) {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      gap: 30px;
+    }
+
+    h2 {
+      font-size: 18px;
+      padding-bottom: 20px;
+    }
+
+    .award {
+      p {
+        font-size: 15px;
+        font-weight: 400;
+        opacity: 0.8;
+        margin-bottom: 32px;
+      }
+    }
+
+    .info {
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 32px;
+        justify-content: center;
+
+        p {
+          font-size: 15px;
+          font-weight: 400;
+          opacity: 0.8;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .icon {
+          padding: 8px;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .recent {
+      width: 100%;
+      height: 100%;
+
+      .img_recent {
+        display: grid;
+        flex-wrap: wrap;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+
+        .img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   .bar_wrapper {
@@ -26,9 +119,31 @@
     font-weight: 400;
     opacity: 0.8;
 
+    @include for-size(desktop-lg) {
+      width: 80%;
+      height: 100%;
+      gap: 20px;
+    }
+
+    @include for-size(tablet-lg) {
+      width: 90%;
+      height: 100%;
+      gap: 10px;
+    }
+
+    @include for-size(tablet) {
+      width: 90%;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      height: 100%;
+      padding-top: 10px;
+    }
+
     .menu {
       display: flex;
-      gap: 8px;
+      gap: 12px;
+      cursor: pointer;
     }
   }
 }

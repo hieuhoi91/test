@@ -2,7 +2,7 @@
 const path = require('path');
 const nextConfig = {
   images: {
-    domains: ['themes-themegoods.b-cdn.net'],
+    domains: ['themes-themegoods.b-cdn.net', 'live.staticflickr.com'],
   },
 
   sassOptions: {

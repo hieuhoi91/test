@@ -10,6 +10,7 @@ const FormInput: FC<FormInputProps> = props => {
     <Paper
       component="form"
       sx={{
+        width: '100%',
         height: '40px',
         paddingLeft: '10px',
         display: 'flex',

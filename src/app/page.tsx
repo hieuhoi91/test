@@ -5,6 +5,7 @@ import BestValueTrips from '@/screen/Home/BestValueTrips';
 import WhyChooseUs from '@/screen/Home/WhyChooseUs';
 import Image from 'next/image';
 import Articles from '@/screen/Home/Articles';
+import ImageParalax from '@/screen/Home/ImageParalax';
 
 export default function Home() {
   return (
@@ -13,15 +14,7 @@ export default function Home() {
       <PopularDestinations />
       <BestValueTrips />
       <WhyChooseUs />
-      <div className={styles.bg}>
-        <Image
-          width={2000}
-          height={1000}
-          alt=""
-          src="https://themes-themegoods.b-cdn.net/grandtour/demo/wp-content/uploads/2016/12/pexels-photo-24377.jpg"
-          className={styles.image}
-        />
-      </div>
+      <ImageParalax />
       <Articles />
     </main>
   );
